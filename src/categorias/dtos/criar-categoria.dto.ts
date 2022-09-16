@@ -1,21 +1,21 @@
-import { ArrayMinSize, IsArray, IsNotEmpty, IsString } from 'class-validator';
+import { ArrayMinSize, IsArray, IsNotEmpty, IsString } from 'class-validator'
 
 export class CriarCategoriaDto {
-  @IsString()
-  @IsNotEmpty()
-  readonly categoria: string;
+    @IsString()
+    @IsNotEmpty()
+    readonly categoria: string
 
-  @IsString()
-  @IsNotEmpty()
-  descricao: string;
+    @IsString()
+    @IsNotEmpty()
+    descricao: string
 
-  @IsArray()
-  @ArrayMinSize(1)
-  eventos: Array<Evento>;
+    @IsArray()
+    @ArrayMinSize(1)
+    eventos: Array<Evento>
 }
 
 interface Evento {
-  nome: string;
-  operacao: string;
-  valor: number;
+    nome: string
+    operacao: string
+    valor: number
 }
